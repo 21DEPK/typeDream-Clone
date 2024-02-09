@@ -5,6 +5,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
+  user-select: none;
   color: #151920;
   font-family: "Inter", sans-serif;
 }
@@ -784,7 +785,7 @@ video {
 .fd4d1d1 span {
   color: #f472b6;
 }
-.fd4d1d2{
+.fd4d1d2 {
   margin-top: 16px;
 }
 .fd4d1d2 h1 {
@@ -802,19 +803,194 @@ video {
   line-height: 1.2;
   color: rgb(170, 170, 170);
 }
-.fd4 .im_container{
+.fd4 .im_container {
   width: 100%;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.fd4 .im_container img{
+.fd4 .im_container img {
   margin-top: 36px;
   object-fit: cover;
   height: 648px;
   width: 700px;
 }
+
+.fifth_page {
+  padding: 84px 25px;
+  width: 100%;
+  height: 1282px;
+  display: flex;
+  justify-content: center;
+}
+.fif_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 1000px;
+}
+.fifh_page .fd3d1d1 span {
+  color: #60a5fa;
+}
+.fif_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  column-gap: 30px;
+  height: 956px;
+  width: 1000px;
+  margin-top: 36px;
+}
+.fif_griddiv {
+  height: 100%;
+  width: 313.33px;
+}
+.fif_griddiv .card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 10px;
+  justify-content: space-between;
+}
+.social_links {
+  width: 190px;
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.social_links a {
+  font-weight: 700;
+}
+.social_links p {
+  color: rgb(128, 128, 128);
+  font-weight: 400;
+  line-height: 1.7rem;
+}
+.profile {
+  display: flex;
+  justify-content: space-between;
+  max-height: 60px;
+  align-items: center;
+  width: 266px;
+}
+.post p {
+  font-size: 16px;
+  letter-spacing: -0.16px;
+  line-height: 1.5;
+  margin-top: 1.5rem;
+  font-weight: 400;
+}
+.post p a {
+  color: rgb(59 130 246);
+}
+.post img {
+  width: 265px;
+  height: 207px;
+  margin-top: 16px;
+}
+.profile img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+.card2 {
+  margin-top: 30px;
+}
+.col1 {
+  grid-column: 1/2;
+  overflow: hidden;
+}
+.col2 {
+  grid-column: 2/3;
+  overflow: hidden;
+}
+.col3 {
+  grid-column: 3/4;
+  overflow: hidden;
+}
+.card3 {
+  height: 534px;
+}
+.card5 {
+  height: 650px;
+}
+.card6 {
+  height: 276px;
+}
+
+/* chat */
+.chat {
+  max-height: 150px;
+  overflow: hidden;
+  width: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chatico {
+  cursor: pointer;
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  justify-content: center;
+}
+.chatico2 {
+  transition: all ease-in 0.2s;
+  translate: 0 2px;
+}
+.chatico {
+  transition: all ease-in 0.2s;
+}
+
+.chat button {
+  position: fixed;
+  bottom: 5.8vh;
+  right: 1.4vw;
+  width: 64px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  background-color: rgb(94, 93, 240);
+}
+.chatico svg,
+.chatico2 svg {
+  height: 40px;
+  line-height: 38px;
+  font-size: 14px;
+  color: #fff;
+}
+.chatico svg {
+  scale: 1.6;
+}
+.chatico svg path,
+.chatico2 svg path {
+  user-select: none;
+  width: 32px;
+  height: 25px;
+  font-size: 25px;
+  fill: rgb(255, 255, 255);
+}
+
+div[aria-hidden="true"] {
+  visibility: hidden;
+}
+/* question section */
+.question_section {
+  padding: 84px 25px;
+  width: 100%;
+  height: 820px;
+}
+
 /* media queries */
 @media screen and (max-width: 1023px) {
   /* navbar */

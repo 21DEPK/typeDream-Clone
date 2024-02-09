@@ -1,5 +1,6 @@
 const hemburger = document.getElementById("hemburger");
-let vidBtn = document.getElementById("videoinaction");
+const vidBtn = document.getElementById("videoinaction");
+const chat = document.getElementById("chatbutton");
 
 hemburger.addEventListener("click", horizontalNavShowOrHide);
 vidBtn.addEventListener("click", () => {
@@ -10,6 +11,18 @@ vidBtn.addEventListener("click", () => {
       "https://typedream-assets.sfo3.cdn.digitaloceanspaces.com/ai-site-builder-landing-page.mp4"
     );
   vidBtn.style.display = "none";
+});
+
+chat.addEventListener("click", (e) => {
+  const hiddenDiv = document.querySelector('div[aria-hidden="true"]');
+  const visibleDiv = document.querySelector('div[aria-hidden="false"]');
+  hiddenDiv.style.translate = "0 -50px";
+  hiddenDiv.style.visibility = "visible";
+  hiddenDiv.setAttribute("aria-hidden", "false");
+  visibleDiv.style.translate = "0 -20px";
+  visibleDiv.style.visibility = "hidden";
+  visibleDiv.setAttribute("aria-hidden", "true");
+  console.log(hiddenDiv);
 });
 
 function horizontalNavShowOrHide() {
