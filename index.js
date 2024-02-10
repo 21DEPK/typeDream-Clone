@@ -2,6 +2,35 @@ const hemburger = document.getElementById("hemburger");
 const vidBtn = document.getElementById("videoinaction");
 const chat = document.getElementById("chatbutton");
 
+{
+  const questions = Array(document.querySelectorAll(".question"));
+  const answers = Array(document.querySelectorAll(".answer"));
+
+  for (let i = 0; i < questions[0].length; i++) {
+    questions[0][i].addEventListener("click", () => {
+      if (!answers[0][i].classList.contains("show")) {
+        for (answer of answers[0]) {
+          if (answer.classList.contains("show")) {
+            answer.previousElementSibling.classList.remove("borderradius");
+            answer.previousElementSibling.lastElementChild.innerHTML =
+              '<path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path>';
+            answer.classList.remove("show");
+          }
+        }
+        answers[0][i].classList.add("show");
+        questions[0][i].classList.add("borderradius");
+        document.querySelector(`#${questions[0][i].id} svg`).innerHTML =
+          '<path d="M5 11h14v2H5z"></path>';
+      } else {
+        answers[0][i].classList.remove("show");
+        questions[0][i].classList.remove("borderradius");
+        document.querySelector(`#${questions[0][i].id} svg`).innerHTML =
+          '<path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path>';
+      }
+    });
+  }
+}
+
 hemburger.addEventListener("click", horizontalNavShowOrHide);
 vidBtn.addEventListener("click", () => {
   document
